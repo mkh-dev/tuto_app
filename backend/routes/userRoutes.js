@@ -10,4 +10,5 @@ userRoutes.post("/login",loginvalidation,validation,Login)
 userRoutes.get("/logout",Logout)
 
 
+
 module.exports=userRoutes

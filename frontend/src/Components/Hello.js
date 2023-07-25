@@ -21,7 +21,7 @@ const Hello = () => {
     }
   return (
     <div>
-      Welcome !
+      Welcome User!
       <button onClick={handleLogout}>logout</button>
     </div>
   )
