@@ -27,9 +27,9 @@ const LoginForm = () => {
           localStorage.setItem('role', role); // Store the user's role in local storage
 
           if (role === 'admin') {
-            navigate('/admin'); // Redirect to the admin dashboard if the role is admin
+            navigate('/admintest'); // Redirect to the admin dashboard if the role is admin
           } else {
-            navigate('/hello'); // Redirect to the user dashboard for any other role (default is 'user')
+            navigate('/usertest'); // Redirect to the user dashboard for any other role (default is 'user')
           }
         }
       })
