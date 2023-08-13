@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const userSchema=require("../models/user")
+var users = require('../models/user');
 
 
 
@@ -8,7 +8,7 @@ const userSchema=require("../models/user")
 exports.Login=async(req,res)=>{
     const {email,password}=req.body
     try {
-        const user= await userSchema.findOne({email})
+        const user= await users.findOne({email})
         if(!user){
             res.status(400).send("email does not exist")
         }
@@ -43,4 +43,3 @@ exports.Logout=(req,res)=>{
 
 }
 
-    

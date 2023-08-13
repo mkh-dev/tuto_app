@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const userSchema = require("../models/user");
+const users = require("../models/utilisater");
 
 exports.isAuth = async (req, res, next) => {
     try {
@@ -9,7 +9,7 @@ exports.isAuth = async (req, res, next) => {
     if (!decode) {
         res.status(400).send("You are not authorized");
     } else {
-    const user = await userSchema.findById(decode.id);
+    const user = await users.findById(decode.id);
     res.status(200).send(user)
     next();
     }
